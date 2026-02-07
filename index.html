@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Rosário</title>
+    <meta name="description" content="Software Engineer with 10+ years of experience. From architecture to aviation to code.">
+    <meta property="og:title" content="Paulo Rosário">
+    <meta property="og:description" content="Software Engineer — 10+ years building software">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let t = localStorage.getItem('theme');
+        if (t) document.documentElement.dataset.theme = t;
+        let l = localStorage.getItem('lang');
+        if (!l) l = navigator.language.startsWith('pt') ? 'pt' : 'en';
+        document.documentElement.dataset.lang = l;
+        document.documentElement.lang = l;
+    </script>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-left">
+        <header>
+            <nav>
+                <button id="theme-toggle" type="button" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button id="lang-toggle" type="button" aria-label="Toggle language"><span lang="en">PT</span><span lang="pt">EN</span></button>
+                <div class="cv-wrapper">
+                    <button id="cv-toggle" type="button" aria-label="Download CV"><span class="icon icon-cv"></span></button>
+                    <div class="cv-dropdown" id="cv-dropdown">
+                        <p lang="en">Download my CV?</p>
+                        <p lang="pt">Descarregar o meu CV?</p>
+                        <a href="media/cv.pdf" download class="cv-confirm"><span lang="en">Download</span><span lang="pt">Descarregar</span></a>
+                    </div>
+                </div>
+            </nav>
+            <img src="media/avatar.jpg" alt="Paulo Rosário" class="avatar" width="96" height="96">
+            <h1>Paulo Rosário</h1>
+            <p class="subtitle"><span lang="en">Software Engineer</span><span lang="pt">Engenheiro de Software</span></p>
+            <div class="social">
+                <a href="https://github.com/paulofilip3" target="_blank" rel="noopener" aria-label="GitHub"><span class="icon icon-github"></span></a>
+                <a href="https://linkedin.com/in/paulofilip3" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon icon-linkedin"></span></a>
+                <a href="https://www.instagram.com/paulofilip3/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                <a href="https://x.com/paulofilip3" target="_blank" rel="noopener" aria-label="X"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="mailto:paulo.filip3@gmail.com" aria-label="Email"><span class="icon icon-email"></span></a>
+            </div>
+            <p class="intro" lang="en">10+ years building software. Born in Faro, Portugal. Briefly studied architecture in Lisbon, earned a pilot's licence in Tires, then moved to Berlin in 2012 and found my way into data engineering. Spent the next decade building data pipelines, automating ad-tech, and developing pseudonymization systems at scale at <a href="https://zalando.de">Zalando</a>, helping engineering teams tackle GDPR. Married Joana along the way and had three daughters.</p>
+            <p class="intro" lang="pt">Mais de 10 anos a desenvolver software. Nascido em Faro. Estudei brevemente arquitectura em Lisboa, tirei a licença de piloto em Tires, mudei-me para Berlim em 2012 e encontrei o meu caminho em engenharia de dados. Passei a década seguinte a construir pipelines de dados, a automatizar ad-tech e a implementar pseudonimização à escala na <a href="https://zalando.pt">Zalando</a>, ajudando equipas de engenharia a lidar com o GDPR. Pelo caminho, casei com a Joana e tivemos três filhas.</p>
+            <p class="intro" lang="en">We moved back to Portugal in 2021. Based in Tomar now — I work remotely for <a href="https://odoo.com">Odoo</a> on ERP upgrades and with Joana run <a href="https://interpt.co">interpt</a>, our software company focused on Odoo consulting, SME digitization, and AI solutions. Still flying recreationally.</p>
+            <p class="intro" lang="pt">Voltámos para Portugal em 2021. Agora em Tomar — trabalho remotamente para a <a href="https://odoo.com">Odoo</a> em upgrades de ERP e com a Joana gerimos a <a href="https://interpt.co">interpt</a>, a nossa empresa de software focada em consultoria Odoo, digitalização para PMEs e soluções de AI. Continuo a voar por lazer.</p>
+        </header>
+        <section class="github-stats">
+            <h2><span class="slash">/</span>github.stats</h2>
+            <dl class="stats-list">
+                <div class="stats-item"><dt>repos</dt><dd id="gh-repos" class="skeleton">—</dd></div>
+                <div class="stats-item"><dt>languages</dt><dd id="gh-langs" class="skeleton">—</dd></div>
+            </dl>
+            <div class="contrib-graph">
+                <p class="contrib-count"><span id="gh-contrib-total" class="skeleton">—</span> <span lang="en">contributions in the last year</span><span lang="pt">contribuições no último ano</span></p>
+                <div class="contrib-wrap">
+                    <div class="contrib-days">
+                        <span></span>
+                        <span><span lang="en">Mon</span><span lang="pt">Seg</span></span>
+                        <span></span>
+                        <span><span lang="en">Wed</span><span lang="pt">Qua</span></span>
+                        <span></span>
+                        <span><span lang="en">Fri</span><span lang="pt">Sex</span></span>
+                        <span></span>
+                    </div>
+                    <div class="contrib-main">
+                        <div class="contrib-scroll">
+                            <div class="contrib-months" id="contrib-months"></div>
+                            <div class="contrib-grid" id="contrib-grid"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contrib-legend">
+                    <span lang="en">Less</span><span lang="pt">Menos</span>
+                    <span class="contrib-cell" data-level="0"></span>
+                    <span class="contrib-cell" data-level="1"></span>
+                    <span class="contrib-cell" data-level="2"></span>
+                    <span class="contrib-cell" data-level="3"></span>
+                    <span class="contrib-cell" data-level="4"></span>
+                    <span lang="en">More</span><span lang="pt">Mais</span>
+                </div>
+            </div>
+        </section>
+        <section class="oss">
+            <h2><span class="slash">/</span>open.source</h2>
+            <div class="projects">
+                <a class="project" href="https://github.com/paulofilip3/pipeline" target="_blank" rel="noopener">
+                    <span class="project-icon icon icon-code-xml"></span>
+                    <div class="project-content">
+                        <h3>pipeline <span class="tag"><span class="lang-dot"></span>Go</span></h3>
+                        <p>A lightweight, generic, concurrent pipeline library for Go.</p>
+                    </div>
+                    <svg class="project-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                </a>
+            </div>
+        </section>
+        <section class="uses">
+            <h2><span class="slash">/</span><a href="https://uses.tech" target="_blank" rel="noopener">uses.tech</a></h2>
+            <dl class="uses-list">
+                <div class="uses-item"><dt>os</dt><dd>Debian 13</dd></div>
+                <div class="uses-item"><dt>wm</dt><dd>Xfce</dd></div>
+                <div class="uses-item"><dt>shell</dt><dd>zsh + tmux</dd></div>
+                <div class="uses-item"><dt>editor</dt><dd>PyCharm</dd></div>
+                <div class="uses-item"><dt>browser</dt><dd>Chrome</dd></div>
+                <div class="uses-item"><dt>font</dt><dd>Hack</dd></div>
+                <div class="uses-item"><dt>theme</dt><dd>Catppuccin</dd></div>
+                <div class="uses-item"><dt>languages</dt><dd>Python, Go, JS</dd></div>
+            </dl>
+        </section>
+        </div>
+
+        <div class="hero-right">
+        <main>
+            <section>
+                <h2><span class="slash">/</span><span lang="en">flight.plan</span><span lang="pt">plano.de.voo</span></h2>
+                <div class="timeline">
+                    <div class="timeline-track" aria-hidden="true"></div>
+
+                    <article class="tl-entry" data-modal="arch" style="--c:var(--mauve)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time>2007 — 2010</time>
+                        <h3><span lang="en">Architecture</span><span lang="pt">Arquitectura</span></h3>
+                        <p><span lang="en">Universidade Lusíada, Lisbon (incomplete)</span><span lang="pt">Universidade Lusíada, Lisboa (incompleto)</span></p>
+                    </article>
+
+                    <article class="tl-entry" data-modal="aviation" style="--c:var(--sky)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time>2009 — 2012</time>
+                        <h3><span lang="en">Aviation</span><span lang="pt">Aviação</span></h3>
+                        <p><span lang="en">Airline Transport Pilot Licence, Tires</span><span lang="pt">Licença de Piloto de Linha Aérea, Tires</span></p>
+                    </article>
+
+                    <article class="tl-entry" data-modal="delta" style="--c:var(--teal)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time>Jun 2012 — Mar 2016</time>
+                        <h3>deltamethod, GmbH</h3>
+                        <p><span lang="en">Analyst → Sr. Technical Consultant, Berlin</span><span lang="pt">Analista → Consultor Técnico Sénior, Berlim</span></p>
+                        <p class="desc"><span lang="en">SEM automation, AdWords tooling & performance analytics</span><span lang="pt">Automação SEM, ferramentas AdWords & analytics de performance</span></p>
+                    </article>
+
+                    <article class="tl-entry" data-modal="crealytics" style="--c:var(--sapphire)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time><span lang="en">Apr 2016 — Mar 2018</span><span lang="pt">Abr 2016 — Mar 2018</span></time>
+                        <h3>crealytics, GmbH</h3>
+                        <p><span lang="en">Sr. Technical Consultant, Berlin</span><span lang="pt">Consultor Técnico Sénior, Berlim</span></p>
+                        <p class="desc"><span lang="en">Title optimization, internal analytics & container-based services</span><span lang="pt">Otimização de títulos, analytics interno & serviços container-based</span></p>
+                    </article>
+
+                    <article class="tl-entry" data-modal="fmr" style="--c:var(--peach)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time><span lang="en">Apr 2018 — Dec 2018</span><span lang="pt">Abr 2018 — Dez 2018</span></time>
+                        <h3>Factory Market Retail, GmbH</h3>
+                        <p><span lang="en">Sr. Data Engineer, Berlin</span><span lang="pt">Sr. Data Engineer, Berlim</span></p>
+                        <p class="desc">ETL pipelines, Apache Airflow & retail data analytics</p>
+                    </article>
+
+                    <article class="tl-entry" data-modal="zalando" style="--c:var(--green)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time>Jan 2019 — Jul 2021</time>
+                        <h3>Zalando, SE</h3>
+                        <p><span lang="en">Sr. Data Engineer, Berlin</span><span lang="pt">Sr. Data Engineer, Berlim</span></p>
+                        <p class="desc"><span lang="en">Data pseudonymization across 400+ engineering teams</span><span lang="pt">Pseudonimização de dados para 400+ equipas de engenharia</span></p>
+                    </article>
+
+                    <article class="tl-entry now" data-modal="odoo" style="--c:var(--lavender)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time><span lang="en">Aug 2021 — Present</span><span lang="pt">Ago 2021 — Presente</span></time>
+                        <h3>Odoo, SA <span class="badge-now">Now</span></h3>
+                        <p><span lang="en">Sr. Data Engineer, Remote</span><span lang="pt">Sr. Data Engineer, Remoto</span></p>
+                        <p class="desc"><span lang="en">ERP customization, version upgrades & database migrations</span><span lang="pt">Customização ERP, upgrades de versão & migrações de base de dados</span></p>
+                    </article>
+
+                    <article class="tl-entry now" data-modal="interpt" style="--c:var(--pink)">
+                        <div class="dot" aria-hidden="true"></div>
+                        <time><span lang="en">Sep 2024 — Present</span><span lang="pt">Set 2024 — Presente</span></time>
+                        <h3>interpt, Lda <span class="badge-now">Now</span></h3>
+                        <p><span lang="en">Co-founder, Tomar</span><span lang="pt">Co-fundador, Tomar</span></p>
+                        <p class="desc"><span lang="en">Odoo consulting, SME digitization & AI solutions</span><span lang="pt">Consultoria Odoo, digitalização para PMEs & soluções de AI</span></p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <section class="map">
+            <h2><span class="slash">/</span><span lang="en">map</span><span lang="pt">mapa</span></h2>
+            <svg viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg" class="europe-map" aria-label="Map of Europe showing places I lived">
+                <!-- Country outlines from Natural Earth via github.com/flekschas/simple-world-map (public domain) -->
+                <!-- Source viewBox: 30.767 241.591 784.077 458.627 — cropped to Europe region -->
+                <!-- Transform: scale(4.2,3.5) translate(-358,-318) maps source Europe region to 500x450 -->
+                <g transform="scale(4.2,3.5) translate(-358,-318)" fill="var(--surface0)" stroke="var(--surface1)" stroke-width="0.28">
+                    <!-- Portugal -->
+                    <path id="pt" d="M387.499,421.716l-0.536,7.478l-1.53,1.384l0.156,0.846l1.071,1.772l-0.691,2.16l1.149,0.39l2.68-0.312l-0.155-2.16l1.756-10.02l-0.382-1.383z"/>
+                    <!-- Spain -->
+                    <path id="es" d="M402.565,416.322h-11.014l-2.222-1.004l-1.071,0.078l-1.297,2.696l0.458,2.775l4.21,0.389l0.536,1.771l-1.833,10.33l0.078,1.851l2.981,1.617l3.439,0.232l6.881-1.694l3.363-4.233l0.077-4.313l5.965-5.395l0.302-2.386l-5.428-0.078z"/>
+                    <!-- Ireland -->
+                    <path id="ie" d="M394.915,383.085l-0.786,5.187l-6.975,2.56h-2.223l-1.582-1.115v-0.96l3.492-2.238l-0.951-1.92l0.156-2.714l3.018,0.155l1.383-3.25l-0.183,2.887l2.344,1.858z"/>
+                    <!-- Great Britain (mainland) -->
+                    <path id="gb" d="M400.629,367.984l-1.582,2.395l0.631,0.959h3.648v1.6l-0.952,1.278l0.632,3.354l2.058,3.994l1.581,3.672l2.533,0.959l1.105,1.92l-0.155,1.755l-1.582,0.959l-0.156,0.795l1.106,0.64l-0.951,1.279l-2.221,0.959l-4.279-0.477l-6.664,3.035l-2.221-1.115l6.345-3.674l-0.796-0.477l-3.328-0.32l2.058-3.033l0.319-2.56l2.696-0.319l-0.475-4.953l-3.174-0.155l-0.95-1.115l0.155-3.674l-1.901,0.156l1.901-6.388l3.492-2.56z"/>
+                    <!-- Northern Ireland / Scotland islands -->
+                    <path d="M393.974,378.693l-2.853,0.32l-0.156,2.56l1.901,1.278l2.058-0.475l0.796-1.436z"/>
+                    <!-- France -->
+                    <path id="fr" d="M412.973,393.588l-1.91,0.467l-3.82,4.158l-1.149,0.078l-1.53-1.081l-0.993,0.233l-0.762,2.386l-5.584,0.155l0.156,1.236l3.82,2.543l4.435,3.543l-0.077,4.236l-2.368,4.157l5.126,2.464l5.204,0.154l1.606-1.85l3.286,0.078l0.916,0.848l3.285-0.233l1.686-2.162l-2.145-2.541l-0.155-1.616l0.458-1.771l-1.071-1.539l-1.833,0.535l-0.232-1.383l4.054-4.469v-2.697l-2.348-0.767l-1.432-0.987z"/>
+                    <!-- Belgium -->
+                    <path id="be" d="M414.019,391.704l-0.554,1.383l5.947,3.925l0.4,0.051l0.375-1.094l0.837-0.588l-1.336-1.499h-0.916l-1.255-1.426z"/>
+                    <!-- Netherlands -->
+                    <path id="nl" d="M421.349,384.572l-3.915,1.928l0.829,0.752l0.088,1.928l-0.829-0.164l-0.917-1.426l-2.188,3.467l3.363,0.699l1.253,1.323l0.666,0.017l0.44-2.99l2.117-0.891z"/>
+                    <!-- Luxembourg -->
+                    <path id="lu" d="M420.424,397.582l0.76,0.679l0.88,0.083l0.194-1.734l-0.253-0.974l-1.224,0.583z"/>
+                    <!-- Germany -->
+                    <path id="de" d="M422.257,384.234l3.086-0.5v-2.178l2.584-0.425l1.418,1.427l1.495,0.164l2.334-1.012l2.083,0.588l1.832,1.592l0.251,5.955l1.832,2.438l-2.411,0.337l-4.003,2.515l0.338,0.839l3.579,3.354l-0.251,1.677l-3.328,1.677l-3.085,0.086l-0.753,1.59h-1.581l-0.752-1.676l-2.749-0.675l-0.088-2.767l-1.39-0.77l0.114-1.861l-0.406-1.328l-1.982-1.824l0.414-2.854l2.161-1.011z"/>
+                    <!-- Denmark -->
+                    <path id="dk" d="M427.123,370.076l-3.586,3.968l-0.13,2.584l1.635,4.263l2.559-0.484l-0.319-3.483l1.764-1.971l-0.034-1.548l-1.245-3.223z"/>
+                    <!-- Norway (mainland) -->
+                    <path id="no" d="M460.567,327.409l1.747-1.279l-0.157-1.435l-1.106-0.641l0.157-1.754h0.95v-0.96l-4.123-1.114l-6.181,0.64l-0.631,2.714l-1.428-0.477l-0.951-1.599l-3.017,0.155l-0.32,3.033l-1.426,0.641l-0.795-1.6l-6.345,5.109l1.271,1.436l-2.378,1.115l-5.393,10.701l-1.901,1.279l0.155,0.959l1.9,0.959l-0.475,2.074l-3.173-0.164l-0.952-1.115l-2.057,2.395l-1.271,0.959l-0.32,2.24l-1.105,0.64l-2.854,0.64l-1.426,4.479l0.951,7.348l1.106,3.354l1.271,1.279l2.853-0.156l4.124-3.994l1.581-2.713l0.478,3.992l2.697-4.789l0.154-13.424l2.195-1.383l0.657-7.408l6.655-9.586l3.173-1.115l1.427-1.755l4.754,1.115l2.377,1.435l0.796-3.992l3.968-2.396z"/>
+                    <!-- Sweden (mainland) -->
+                    <path id="se" d="M445.232,329.52l1.693,1.563h3.173l1.746,3.354l0.477,5.748l-4.278,3.035v3.033l-3.017,4.158l-1.746,0.154l-2.378,3.994l0.155,3.838l4.124,3.035l-0.319,1.754l-1.582,2.396l-2.377,2.074l0.155,6.872l-3.647,1.279l-1.271,2.713h-1.747l-0.949-4.789l-3.969-6.084l3.26-5.455l0.225-13.477l2.248-1.236l0.545-7.709l6.405-9.172z"/>
+                    <!-- Sweden island (Gotland) -->
+                    <path d="M445.898,368.927l-1.824,1.443l0.917,2.118l1.616-1.573z"/>
+                    <!-- Finland -->
+                    <path id="fi" d="M453.072,340.202l1.79,0.786l1.104,2.074l-1.104,1.436l-5.55,6.068l-0.952,3.199l1.271,4.633l4.278,3.199l5.706-2.715l4.598-0.64l4.279-6.872l-3.173-7.512l-3.018-7.192l0.477-4.633l-1.901-0.32l-0.492-3.38l-2.559-4.175l-2.836,1.962l-1.114,4.556l-3.008-1.807l-4.185-1.021l-0.934,1.09l1.607,1.453l2.931-0.053l2.359,3.812z"/>
+                    <!-- Poland -->
+                    <path id="pl" d="M457.109,390.184l0.733,1.348l0.174,1.435l-0.604,1.392l-1.383,2.664l-1.167,0.526l-1.514-0.657l-0.908,0.043l-2.204,0.83l-2.506-0.742l-4.062-2.879l-3.978-2.135l-1.6-2.438l-0.303-5.75l3.112-2.705l4.062-1.35l1.328-0.138l0.315,1.007l1.725,0.692l4.766,0.09l1.47-0.043l2.421,3.708l-0.604,1.521l0.259,1.789z"/>
+                    <!-- Czech Republic -->
+                    <path id="cz" d="M437.202,398.921h2.567h1.263l2.049,1.461l3.795-3.155l-3.683-2.627l-3.648-1.765l-2.498,0.45l-3.389,2.178z"/>
+                    <!-- Slovakia -->
+                    <path id="sk" d="M443.607,400.875l0.597,0.527l0.077,0.898l6.596-0.146l4.875-2.102l-0.077-2.135l-0.934,0.415l-1.34-0.718l-0.821-0.035l-2.161,0.865l-2.938-0.709z"/>
+                    <!-- Switzerland -->
+                    <path id="ch" d="M423.787,402.82l-3.771,4.011l0.078,0.405l1.547-0.483l1.393,1.937l2.352-0.83l1.625,1.263l0.667-0.38l2.005-3.146l-0.511-0.484l-1.979-0.051l-0.959-1.963z"/>
+                    <!-- Austria -->
+                    <path id="at" d="M430.46,403.459l-0.562,1.167l0.483,0.83l2.015-0.415h1.711l1.857,1.572l3.95-0.717l2.904-1.729l0.743-1.167l-0.112-1.504l-2.611-1.954l-3.501,0.035l-0.294,1.988l-3.683,1.797z"/>
+                    <!-- Hungary -->
+                    <path id="hu" d="M444.386,403.01l-1.003,1.573l0.078,2.403l1.599,0.82l4.919,0.147l6.854-5.774l0.034-1.279l-0.742-0.371l-4.953,2.248z"/>
+                    <!-- Slovenia -->
+                    <path id="si" d="M442.708,405.076l-2.195,1.314l-4.097,0.898l0.82,2.368l2.87,0.034l2.646-2.213z"/>
+                    <!-- Croatia -->
+                    <path id="hr" d="M443.417,407.816l-3.051,2.515h-3.095l-0.372,2.178l1.418,0.372l0.709-1.055l1.114,0.977l0.891,3.112l6.109,2.853l0.605-0.691l-6.197-6.396l0.631-1.166l5.888-0.226l0.596-1.876l-3.838,0.111z"/>
+                    <!-- Bosnia -->
+                    <path id="ba" d="M442.708,411.084l-0.319,0.527l5.801,5.981l2.127-3.13l-0.078-1.234l-1.857-2.256z"/>
+                    <!-- Serbia -->
+                    <path id="rs" d="M452.001,407.279l-1.772,1.332h-0.863l-0.588,1.832l2.092,2.43l0.139,1.928l-0.882,1.246l3.068,3.197l3.317-1.012l-0.274-4.721z"/>
+                    <!-- Montenegro -->
+                    <path id="me" d="M449.68,416.677l-1.266,1.789l0.362,1.099l1.504,0.275l1.184-1.607z"/>
+                    <!-- North Macedonia -->
+                    <path id="mk" d="M456.643,418.924l-2.912,0.959l0.139,2.473l0.683,0.873l3.458-1.606z"/>
+                    <!-- Albania -->
+                    <path id="al" d="M450.679,420.438v3.984l1.142,2.152l0.82-0.096l1.409-2.566l-0.821-1.15l-0.319-2.844l-1.089-1.012z"/>
+                    <!-- Romania -->
+                    <path id="ro" d="M457.731,401.281l-0.226,1.279l-5.005,4.166l4.184,6.137l2.682,1.877h4.823l1.591-1.331l2.135-0.276l1.591,0.959l2.818-3.207l-0.545-1.607l-2.861-0.734l-1.953-0.095l0.094-2.749l-2.593-4.08z"/>
+                    <!-- Bulgaria -->
+                    <path id="bg" d="M457.092,414.066l0.139,4.305l1.452,3.025l5.454,0.095l2.455-1.737l2.412-0.959l-0.588-2.75l0.545-1.469l-1.228-0.641l-1.687,0.139l-1.323,1.332l-5.549,0.043z"/>
+                    <!-- Greece (mainland) -->
+                    <path id="gr" d="M453.004,427.213l-0.096,1.15l4.003,2.014l1.911,0.734l-1.003,1.055l-2.23,0.227l-0.319,1.01l0.771,1.738l2.498,1.33l1.09,0.096l0.138-2.981l1.635-1.972l-4.46-5.272l0.589-1.789l1.046-0.043l1.591,1.279l1.002-0.501l0.319-1.79l3.732,0.534l1.134-3.239l-1.953,1.375l-5.731-0.14l-3.726,1.929z"/>
+                    <!-- Crete -->
+                    <path d="M461.69,438.442l1.408,0.043l0.589,0.873h2.05l1.363-0.501l0.459,0.553l-0.907,1.192l-4.002,0.139l-0.728-0.959l-0.77-0.458z"/>
+                    <!-- Italy (mainland) -->
+                    <path id="it" d="M423.233,409.391l-0.535,1.356l0.146,1.478l2.065,2.412l3.25-0.113l7.175,8.334l4.479,1.297l2.646,2.498l0.631,5.695l1.417-0.828l1.229-3.104l-0.303-2.229l2.101-0.19l0.304-1.263l-5.922-2.834l-5.619-5.523l-2.238-3.303l-0.545-3.137l2.861-0.684l-0.734-2.066l-1.755-1.478l-1.513-0.069l-2.108,0.58l-1.99,2.781l-1.201,0.795l-1.858-1.141z"/>
+                    <!-- Sicily -->
+                    <path d="M440.668,431.898l-1.253-0.674l-4.278,0.674l0.146,1.158l3.847,1.937l0.579,0.631l1.012,0.147z"/>
+                    <!-- Sardinia -->
+                    <path d="M427.806,423.566l-2.289,1.158l0.303,4.469l1.833,0.311l1.374-1.312v-4.235z"/>
+                </g>
+
+                <!-- Route: Faro → Lisboa → Berlin → Tomar -->
+                <path class="route" d="M125 412 Q95 415 117 393 Q200 300 316 247 Q240 290 129 386" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" pathLength="1"/>
+
+                <!-- Plane flying the route -->
+                <path class="plane-icon" d="M6 0 L1 -1.5 L-1 -5 L-2 -4 L-1 -1 L-5 -1 L-6 -2.5 L-7 -2 L-5.5 0 L-7 2 L-6 2.5 L-5 1 L-1 1 L-2 4 L-1 5 L1 1.5 Z" fill="var(--accent)"/>
+
+                <!-- City dots -->
+                <!-- Faro (southern Portugal, middle of south coast) -->
+                <circle cx="125" cy="412" r="5" fill="var(--peach)"/>
+                <!-- Lisbon / Tires (west coast, south of Tomar) -->
+                <circle cx="117" cy="393" r="5" fill="var(--mauve)"/>
+                <!-- Berlin (center of Germany, source ~432,390) -->
+                <circle cx="316" cy="247" r="5" fill="var(--teal)"/>
+                <!-- Tomar (current — central Portugal, source ~388,426) -->
+                <circle cx="129" cy="386" r="6" fill="var(--green)">
+                    <animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- City labels -->
+                <text x="125" y="428" text-anchor="middle" fill="var(--subtext0)" font-size="11" font-family="inherit">Faro</text>
+                <text x="90" y="398" text-anchor="middle" fill="var(--subtext0)" font-size="11" font-family="inherit">Lisboa</text>
+                <text x="316" y="238" text-anchor="middle" fill="var(--subtext0)" font-size="11" font-family="inherit">Berlin</text>
+                <text x="146" y="390" text-anchor="start" fill="var(--green)" font-size="11" font-family="inherit" font-weight="600">Tomar</text>
+            </svg>
+        </section>
+        </div>
+    </div>
+
+    <dialog id="modal-arch" class="modal" style="--c:var(--mauve)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media"></div>
+        <div class="modal-body">
+            <h3><span lang="en">Architecture</span><span lang="pt">Arquitectura</span></h3>
+            <time>2007 — 2010</time>
+            <p lang="en">Started a Master of Architecture at Universidade Lusíada in Lisbon. Quit halfway through the 2nd year (72 ECTS done) to go fly planes.</p>
+            <p lang="pt">Comecei o Mestrado em Arquitectura na Universidade Lusíada em Lisboa. Desisti a meio do 2º ano (72 ECTS feitos) para ir pilotar aviões.</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-aviation" class="modal" style="--c:var(--sky)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media slideshow">
+            <video muted playsinline preload="none" class="active">
+                <source src="media/aviation/aviation.webm" type="video/webm">
+            </video>
+            <img src="media/aviation/1.jpg" alt="Paulo flying in the cockpit" width="1120" height="840" loading="lazy">
+            <img src="media/aviation/2.jpg" alt="Paulo with a Cessna on the tarmac" width="1120" height="840" loading="lazy">
+            <img src="media/aviation/3.jpg" alt="Aerial view of Berlin from the cockpit" width="1120" height="840" loading="lazy">
+            <img src="media/aviation/4.jpg" alt="Paulo at the instrument panel" width="1120" height="840" loading="lazy">
+            <img src="media/aviation/5.jpg" alt="Final approach to runway" width="1120" height="840" loading="lazy">
+        </div>
+        <div class="modal-body">
+            <h3><span lang="en">Aviation</span><span lang="pt">Aviação</span></h3>
+            <time>2009 — 2012</time>
+            <p lang="en">Airline Transport Pilot Licence (ATPL) at Leávia in Tires. Ground school, flight hours, instrument rating — the full program. The 2008 crisis killed airline hiring across Europe, so jobs were scarce. Ended up pivoting to tech.</p>
+            <p lang="pt">Licença de Piloto de Linha Aérea (ATPL) na Leávia, em Tires. Escola teórica, horas de voo, qualificação de instrumentos — o programa completo. A crise de 2008 travou as contratações das companhias aéreas na Europa. Acabei por mudar para tecnologia.</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-delta" class="modal" style="--c:var(--teal)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media slideshow"><video src="media/delta/delta.webm" muted playsinline preload="none" width="1280" height="720" class="active"></video><img src="media/delta/1.jpg" alt="Paulo at deltamethod" width="1120" height="747" loading="lazy"><img src="media/delta/2.jpg" alt="Berlin early days" width="1120" height="1493" loading="lazy"><img src="media/delta/3.jpg" alt="Berlin early days" width="1120" height="1120" loading="lazy"><img src="media/delta/4.jpg" alt="Berlin early days" width="1120" height="1120" loading="lazy"><img src="media/delta/5.jpg" alt="Berlin life" width="1120" height="840" loading="lazy"><img src="media/delta/6.jpg" alt="Berlin life" width="1120" height="1120" loading="lazy"><img src="media/delta/7.jpg" alt="Berlin nightlife" width="1120" height="1120" loading="lazy"><img src="media/delta/8.jpg" alt="Berlin life" width="1120" height="1493" loading="lazy"></div>
+        <div class="modal-body">
+            <h3>deltamethod, GmbH</h3>
+            <time>Jun 2012 — Mar 2016</time>
+            <p lang="en">Moved to Berlin. Joined deltamethod (acquired by crealytics) as an Analyst, left as Sr. Technical Consultant. Built tools for automated AdWords account auditing, keyword bidding and ad copy management integrated into Campaign Suite (the main product), performance monitoring scripts for clients, and an internal web app to track all the custom software we maintained. First real programming job — learned by doing.</p>
+            <p lang="pt">Mudei-me para Berlim. Entrei na deltamethod (adquirida pela crealytics) como Analista, saí como Consultor Técnico Sénior. Construí ferramentas para auditorias automáticas de contas AdWords, soluções de keyword bidding e gestão de anúncios integradas no Campaign Suite (o produto principal), scripts de monitorização de performance para clientes e uma web app interna para acompanhar todo o software custom que mantínhamos. Primeiro emprego a programar a sério — aprendi fazendo.</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-crealytics" class="modal" style="--c:var(--sapphire)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media"><video src="media/crealytics/crealytics.webm" muted loop playsinline preload="none" width="1280" height="720"></video></div>
+        <div class="modal-body">
+            <h3>crealytics, GmbH</h3>
+            <a class="modal-link" href="https://crealytics.com" target="_blank" rel="noopener">crealytics.com</a>
+            <time><span lang="en">Apr 2016 — Mar 2018</span><span lang="pt">Abr 2016 — Mar 2018</span></time>
+            <p lang="en">Sr. Technical Consultant. Implemented a title optimization feature in camato (the core product). Built an internal analytics tool for Account Management and BI teams to create, run, and schedule analyses across all clients' marketing data. Maintained legacy client solutions while porting them to a container-based, service-oriented architecture.</p>
+            <p lang="pt">Consultor Técnico Sénior. Implementei uma funcionalidade de otimização de títulos no camato (o produto principal). Construí uma ferramenta de analytics interna para as equipas de Account Management e BI criarem, executarem e agendarem análises sobre os dados de marketing de todos os clientes. Mantive soluções legacy de clientes enquanto as migrava para uma arquitectura de serviços baseada em containers.</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-fmr" class="modal" style="--c:var(--peach)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media"><video src="media/fmr/fmr.webm" muted playsinline loop preload="none"></video></div>
+        <div class="modal-body">
+            <h3>Factory Market Retail, GmbH</h3>
+            <time><span lang="en">Apr 2018 — Dec 2018</span><span lang="pt">Abr 2018 — Dez 2018</span></time>
+            <p lang="en">Sr. Data Engineer. Set up and managed Apache Airflow (20+ DAGs) for retail/sales data consolidation. Integrated POS data into the ERP. Built a webapp to automate Facebook Ads creation from product inventory. Wrote automation scripts for category managers (daily KPI reports, promotions rollout). Deployed and maintained Redash for data visualization.</p>
+            <p lang="pt">Sr. Data Engineer. Montei e geri Apache Airflow (20+ DAGs) para consolidação de dados de retalho e vendas. Integrei dados de POS no ERP. Construí uma webapp para automatizar a criação de Facebook Ads a partir do inventário. Escrevi scripts de automação para category managers (relatórios diários de KPIs, rollout de promoções). Instalei e mantive Redash para visualização de dados.</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-zalando" class="modal" style="--c:var(--green)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media slideshow">
+            <img src="media/zalando/team.jpg" alt="Zalando data privacy team" width="1120" height="747" loading="lazy" class="active">
+            <img src="media/zalando/1.jpg" alt="Paulo at Zalando office" width="1120" height="747" loading="lazy">
+            <img src="media/zalando/2.jpg" alt="Paulo working at Zalando" width="1120" height="747" loading="lazy">
+            <img src="media/zalando/3.jpg" alt="Paulo at his desk at Zalando" width="1120" height="747" loading="lazy">
+            <img src="media/zalando/4.jpg" alt="Zalando team boat trip" width="1120" height="712" loading="lazy">
+            <img src="media/zalando/5.jpg" alt="Zalando team at the dock" width="1120" height="840" loading="lazy">
+        </div>
+        <div class="modal-body">
+            <h3>Zalando, SE</h3>
+            <a class="modal-link" href="https://zalando.de" lang="en" target="_blank" rel="noopener">zalando.de</a><a class="modal-link" href="https://zalando.pt" lang="pt" target="_blank" rel="noopener">zalando.pt</a>
+            <time>Jan 2019 — Jul 2021</time>
+            <p lang="en">Sr. Data Engineer on the data privacy team. Designed processes for 200+ engineering teams to implement privacy measures across tens of thousands of storage instances — databases, caches, queues, file systems, email servers. Built a pseudonymization system for data in transit and at rest, covering GDPR rights: Access (Art. 15), Erasure (Art. 17), Portability (Art. 20), Restriction and Objection (Art. 18 & 21).</p>
+            <p lang="pt">Sr. Data Engineer na equipa de data privacy. Desenhei processos para mais de 200 equipas de engenharia implementarem medidas de privacidade em dezenas de milhares de instâncias de armazenamento — bases de dados, caches, filas, sistemas de ficheiros, servidores de email. Construí um sistema de pseudonimização para dados em trânsito e em repouso, cobrindo direitos do GDPR: Acesso (Art. 15), Apagamento (Art. 17), Portabilidade (Art. 20), Restrição e Oposição (Art. 18 e 21).</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-odoo" class="modal" style="--c:var(--lavender)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media slideshow">
+            <video src="media/odoo/odoo.webm" muted playsinline preload="none" width="480" height="864" class="active"></video>
+            <img src="media/odoo/team.jpg" alt="Odoo team at Odoo Experience" width="1120" height="840" loading="lazy">
+            <img src="media/odoo/1.jpg" alt="Odoo Experience keynote" width="1120" height="1120" loading="lazy">
+            <img src="media/odoo/2.jpg" alt="Odoo team at the party" width="1120" height="840" loading="lazy">
+            <img src="media/odoo/3.jpg" alt="Atomium at sunset, Brussels" width="1120" height="1493" loading="lazy">
+        </div>
+        <div class="modal-body">
+            <h3>Odoo, SA</h3>
+            <a class="modal-link" href="https://odoo.com" target="_blank" rel="noopener">odoo.com</a>
+            <time><span lang="en">Aug 2021 — Present</span><span lang="pt">Ago 2021 — Presente</span></time>
+            <p lang="en">Sr. Data Engineer, remote. Analyze business requirements and write technical specs for custom ERP solutions. Develop and maintain code customizations for specific business flows. Upgrade backend and frontend customizations to newer Odoo versions. Write migration scripts to adapt databases programmatically. Work across SaaS, Odoo.sh, and on-premise.</p>
+            <p lang="pt">Sr. Data Engineer, remoto. Analiso requisitos de negócio e escrevo especificações técnicas para soluções ERP customizadas. Desenvolvo e mantenho customizações de código para fluxos de negócio específicos. Faço upgrade de customizações de backend e frontend para novas versões do Odoo. Escrevo scripts de migração para adaptar bases de dados programaticamente. Trabalho em SaaS, Odoo.sh e on-premise.</p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-interpt" class="modal" style="--c:var(--pink)">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-media"><img src="media/interpt/interpt.png" alt="interpt" width="1456" height="816" loading="lazy"></div>
+        <div class="modal-body">
+            <h3>interpt, Lda</h3>
+            <a class="modal-link" href="https://interpt.co" target="_blank" rel="noopener">interpt.co</a>
+            <time><span lang="en">Sep 2024 — Present</span><span lang="pt">Set 2024 — Presente</span></time>
+            <p lang="en">Co-founded with Joana. Odoo consulting, SME digitization, and AI solutions for Portuguese businesses.</p>
+            <p lang="pt">Co-fundada com a Joana. Consultoria Odoo, digitalização de PMEs e soluções de AI para empresas portuguesas.</p>
+        </div>
+    </dialog>
+
+    <footer>
+        <p class="colophon"><span lang="en">Coded with <span class="heart">&hearts;</span> and</span><span lang="pt">Feito com <span class="heart">&hearts;</span> e</span> <a href="https://catppuccin.com" target="_blank" rel="noopener" class="catppuccin"><svg width="16" height="16" viewBox="0 0 1042 1042" aria-hidden="true" style="--logo-mauve:#cba6f7;--logo-sapphire:#74c7ec;--logo-green:#a6e3a1;--logo-yellow:#f9e2af;--logo-peach:#fab387;--logo-red:#f38ba8;--animation-duration:3s"><style>@keyframes rainbow{0%,16.6%,to{fill:var(--logo-mauve)}16.7%,33%{fill:var(--logo-sapphire)}33.1%,49.9%{fill:var(--logo-green)}50%,66.5%{fill:var(--logo-yellow)}66.6%,83.2%{fill:var(--logo-peach)}83.3%,99.9%{fill:var(--logo-red)}}.is-animated{animation:var(--animation-duration) rainbow infinite running}</style><g id="rainbow"><path fill="var(--logo-mauve)" d="M521 0c287 0 521 233 521 521v13l-1 1v21h-1v12l-1 1v8l-1 2v8h-1v7l-1 1v5l-1 2v5l-1 1v5l-1 1v4l-1 1v4l-1 1v4l-1 1v3l-1 2v3l-1 1v4l-1 1v2l-1 1v4l-1 1v3h-1v3l-1 1v2l-1 2v3h-1v3h-1v3l-1 1v2l-1 2v1l-1 2v1l-1 2v1l-1 2v1l-1 2v1l-1 2v1l-1 2v2l-1 1v2l-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v2h-1v1l-1 2v1l-1 1v2h-1v2l-1 1v2l-1 1-1 1v2l-1 1v2h-1v1l-1 2v1l-1 2-1 1v1l-1 2-1 1v2l-1 1-1 1v2h-1v2l-1 1v1h-1v2l-1 1-1 1v2l-1 1-1 2v1h-1v2l-1 1-1 1v2l-1 1-1 1-1 2v1h-1v2l-1 1-1 1-1 2v1l-1 1-1 2-1 1v1l-1 1v1l-1 1-1 1v1l-1 1-1 1v2l-1 1-1 1-1 1-1 2v1h-1v1l-1 1v1l-1 1-1 1v1l-1 1-1 1v1h-1v2h-1v1l-1 1-1 1v1l-1 1-1 1-1 1v1l-1 1v1h-1v1h-1v1l-1 1v1l-1 1-1 1v1h-1v1l-1 1-1 1-1 1-1 1v1l-1 1-1 1-1 1-1 2v1h-1v1h-1v1h-1v1l-1 1v1h-1v1h-1v1l-1 1-1 1v1l-1 1-1 1-1 1-1 1v1h-1v1l-1 1-1 1-1 1-1 1-1 1v1l-1 1h-1v1h-1v1h-1v1h-1v1l-1 1-1 1v1h-1l-1 1-1 1-1 1-1 1v1h-1v1l-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1h-1l-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1h-1v1h-1v1h-1v1l-1 1h-1l-1 1v1h-1l-1 1-1 1-1 1-1 1-1 1h-1l-1 1-1 1-1 1-1 1h-1l-1 1-1 1h-1v1l-1 1h-1l-1 1-1 1h-1v1h-1l-1 1-1 1h-1l-1 1-1 1-1 1-2 1-1 1-1 1-1 1h-1l-1 1-1 1-1 1-1 1h-2v1h-1l-1 1-1 1h-1l-1 1-1 1-1 1-2 1-1 1h-1l-1 1h-1l-1 1-1 1-1 1h-1l-1 1-1 1-1 1h-2v1h-1l-1 1h-1l-1 1-1 1h-1l-1 1h-1l-1 1-1 1h-1l-1 1-1 1h-2l-1 1-1 1-2 1-1 1h-1l-2 1-1 1-1 1h-2v1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1-1 1h-2l-1 1h-1l-1 1-1 1h-2l-1 1-1 1h-1l-483-10h-1l-1-1h-1l-1-1-2-1-1-1h-1l-2-1-1-1-1-1h-2v-1h-1l-1-1h-1l-1-1-1-1h-1l-1-1h-1v-1h-1l-1-1h-1l-1-1-1-1h-1l-1-1h-1l-1-1-1-1-2-1-1-1-1-1h-2v-1h-1v-1h-1l-2-1-1-1-1-1-1-1h-1l-1-1-1-1h-1v-1h-1l-1-1h-1l-1-1-1-1-2-1-1-1-1-1-1-1h-1l-1-1-1-1-1-1-1-1h-1l-1-1h-1v-1h-1v-1h-1l-1-1-1-1h-1v-1h-1l-1-1v-1h-2l-1-1-1-1-1-1-1-1h-1l-1-1-1-1-1-1-1-1-1-1-1-1-1-1h-1l-1-1v-1h-1v-1h-1v-1h-1l-1-1-1-1h-1v-1l-1-1-1-1-1-1-1-1h-1v-1h-1l-1-1-1-1-1-1-1-1-1-1-1-1h-1l-1-1-1-1v-1h-1l-1-1v-1l-1-1-1-1-1-1-1-1h-1v-1h-1l-1-1-1-1-1-1v-1h-1v-1l-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1v-1h-1v-1h-1v-1h-1l-1-1-1-1-1-1v-1l-1-1-1-1-1-1-1-1-1-1v-1h-1v-1l-1-1-1-1-1-1-1-1-1-1v-1l-1-1-1-1-1-1-1-1-1-1v-1l-1-1-1-1-1-1-1-1v-1l-1-1-1-1-1-1-1-1v-1h-1v-1l-1-1v-1h-1l-1-1v-1l-1-1v-1l-1-1-1-1-1-2-1-1-1-1-1-1v-1l-1-1-1-1-1-1v-1l-1-1v-1h-1v-1l-1-1v-1l-1-1-1-1-1-1v-1l-1-1-1-1v-1h-1v-2l-1-1-1-1-1-1v-1l-1-1v-1h-1v-1l-1-1v-1l-1-1-1-1v-1l-1-1v-1h-1v-2l-1-1-1-1-1-1v-2h-1v-1l-1-1v-1l-1-1-1-1v-1l-1-1v-1l-1-1-1-2-1-1v-2l-1-1-1-1v-2h-1v-1l-1-1v-1l-1-1v-1h-1v-2l-1-1-1-2v-1h-1v-1l-1-2v-1l-1-1v-1l-1-1-1-1v-2l-1-1-1-2v-1l-1-1v-1l-1-1v-2l-1-1-1-1v-2l-1-1v-2h-1v-1l-1-1v-2h-1v-2l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-2l-1-1v-2l-1-1-1-2v-1l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2h-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-3l-1-1v-3l-1-1v-2l-1-1v-2l-1-1v-3h-1v-4l-1-1v-2l-1-1v-3l-1-2v-1l-1-2v-3l-1-1v-4l-1-1v-4l-1-1v-3l-1-2v-3l-1-2v-3l-1-1v-5l-1-2v-4l-1-1v-6l-1-2v-5l-1-1v-7l-1-1v-9l-1-1v-10l-1-2v-15l-1-1v-22C0 233 233 0 521 0" class="is-animated" style="animation-delay:calc((var(--animation-duration)/6*0)*-1)"/><path fill="var(--logo-sapphire)" d="M521 0h22l1 1h16l1 1h10l1 1h9l1 1h7l1 1h6l1 1h5l1 1h6l1 1h4l1 1h5l1 1h4l1 1h4l1 1h4v1h3l1 1h4l1 1h3l1 1h3l1 1h3v1h3l1 1h3l1 1h2l1 1h3l1 1h2l1 1h3v1l6 1 1 1h2l1 1h2l1 1h2v1h2l1 1h2l1 1h2l1 1h2v1h3v1h2l1 1h1l2 1h1l8 4h2l1 1h2l1 1 1 1h2l1 1h1l1 1h1l1 1h2l1 1 1 1h2l1 1 2 1h1l16 8 2 1 1 1h1l2 1 1 1 1 1h2l1 1 1 1h2a521 521 0 0 1 265 403v4l1 1v12l1 1v1L545 983l-275-6A523 523 0 0 1 41 725l-2-7h-1v-2l-1-1v-2l-1-1v-1l-1-2v-1l-1-2-1-1v-2l-1-1v-2l-1-1v-1l-1-2v-1l-1-2v-1l-1-2v-1l-1-2v-1l-1-1v-2l-1-1v-2l-1-1v-3h-1v-3l-1-2v-1l-1-1v-2l-1-2v-3l-1-1v-2l-1-1v-2l-1-1v-3l-1-1v-3l-1-2v-1l-1-2v-3l-1-1v-4l-1-1v-3l-1-2v-3l-1-1v-5H9v-5l-1-1v-4l-1-1v-6H6v-6l-1-1v-5l-1-2v-7l-1-1v-8l-1-1v-11l-1-2v-14l-1-1v-23C0 233 233 0 521 0" class="is-animated" style="animation-delay:calc((var(--animation-duration)/6*1)*-1)"/><path fill="var(--logo-green)" d="M521 0h22l1 1h15l2 1h10l1 1h9l1 1h7l1 1h5l2 1h6v1h5l2 1h5l1 1h4l1 1h3l2 1h3l1 1h4l1 1h4l1 1h3v1h4v1h4l1 1h2l1 1h3l1 1h3l1 1h2l1 1h3l1 1h2l1 1h3v1h3l1 1h1l1 1h3v1h3l1 1h2l1 1h1l1 1h2l1 1h2l1 1h2l1 1h2v1h2l1 1h1l1 1h2l1 1h2l1 1 4 1a523 523 0 0 1 267 250l1 1v1l1 1v1l1 1-684 684-36-1A523 523 0 0 1 23 675v-1l-1-2v-2l-1-1-3-12v-1l-1-1v-4l-1-1v-2l-1-1v-3l-2-7v-1l-1-1v-5h-1v-5h-1v-4l-1-1v-1l-1-5v-4l-1-1v-6H6v-6H5v-7l-1-1v-7l-1-1v-8l-1-1v-11H1v-16l-1-1v-23C0 233 233 0 521 0" class="is-animated" style="animation-delay:calc((var(--animation-duration)/6*2)*-1)"/><path fill="var(--logo-yellow)" d="M151 888A519 519 0 0 1 521 0c143 0 273 58 367 151z" class="is-animated" style="animation-delay:calc((var(--animation-duration)/6*3)*-1)"/><path fill="var(--logo-peach)" d="M50 744Q1 642 0 521A521 521 0 0 1 744 50z" class="is-animated" style="animation-delay:calc((var(--animation-duration)/6*4)*-1)"/><path fill="var(--logo-red)" d="m1 549-1-28A521 521 0 0 1 549 1z" class="is-animated" style="animation-delay:calc((var(--animation-duration)/6*5)*-1)"/></g><g id="pepperjack"><path id="body" fill="var(--mantle)" d="M270 977q11-88 34-156a249 249 0 0 1-140-193c-11-80 7-173 54-239-11-44-27-129-16-178q7-20 28-20 93 5 153 75c76-28 173-28 236-9 33-46 72-71 124-84q21-3 31 14c23 45 25 108 13 160 150 145 112 356-54 456q18 89 20 184a518 518 0 0 1-483-10"/><path id="face" fill="var(--text)" d="M694 395c35-2 66 21 75 53q1 6-3 8-5 3-9-1a80 80 0 0 0-61-23q-35 2-56 29-3 3-8 1-4-2-4-7c5-32 31-58 66-60m-229 5q31-1 54 17 23 19 32 49 2 7-4 10-5 3-10-2a89 89 0 0 0-69-29q-41 4-64 35-4 5-9 2-6-2-5-9 5-29 25-50 20-20 50-23m151 121 32-2q5-1 8 7 3 7-1 12-18 30-32 32c-10 1-22-7-44-24q-6-6-6-14 2-8 8-9zm7 73q5-5 10-2 16 12 28 9c8-2 16-4 23-14 10-16 13-6 8 7q-5 13-18 23-13 11-34 5-8-3-14 3-15 14-34 14-20 0-40-16c-13-13-13-26 9-13 13 9 25 6 35 4q15-2 27-20"/><path id="bowtie" fill="var(--red)" d="M617 875a77 77 0 0 1-58 41q-4 0-6-3-24-48-13-92l2-4 5-1q45 13 67 32 16-21 44-28 5-1 7 4 11 34 3 67-2 6-9 5-24-7-42-21"/></g></svg></a><span lang="en"> by Paulo Rosário.</span><span lang="pt"> por Paulo Rosário.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
